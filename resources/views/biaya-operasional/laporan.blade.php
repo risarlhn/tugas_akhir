@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-sm btn-info mt-4"> <i class="fas fa-filter"></i> filter</button>
-                            <a href="{{ route('biaya-operasional.cetak') }}" class="btn btn-sm btn-info mt-4">
+                            <a href="{{ route('biaya-operasional.cetak') }}?startDate={{ request('startDate') }}&endDate={{ request('endDate') }}"  class="btn btn-sm btn-info mt-4">
                                  <i class="fas fa-print"></i> Cetak PDF
                             </a>                            
                         </div>

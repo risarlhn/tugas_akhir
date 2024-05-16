@@ -40,28 +40,23 @@
                                         <tr>
                                             <td>1</td>
                                             <td style="vertical-align: top;">
-                                            <label for="cars">Pilih Kategori :</label>
                                                 <select class="form-control" name="kategori_pengeluaran" value="{{ $biayaOperasional->kategori_pengeluaran }}" >
+                                                <option >Pilih Kategori :</option>
                                                 <option value="Pokok Penjualan">Pokok Penjualan</option>
                                                 <option value="Biaya Umum">Biaya Umum</option>
                                                 </select>
                                             </td>
                                             <div class="input-group mb-3">
- 
                                             <td style="vertical-align: top;">
-                                            <label for="cars">Pilih Jenis Pokok Penjualan :</label>
                                             <select class="form-control" name="jenis_pengeluaran"  value="{{ $biayaOperasional->jenis_pengeluaran }}">
+                                            <option >Pilih Jenis Pengeluaran :</option>
                                                 <option value="Pembelian Barang">Pembelian Barang</option>
                                                 <option value="Biaya Transportasi">Biaya Transportasi</option>
                                                 <option value="Ban">Ban</option>
                                                 <option value="Pelumas Oli">Pelumas Oli</option>
                                                 <option value="Material Umum">Material Umum</option>
-                                                </select>
-                                            <label for="cars">Pilih Jenis Biaya Transportasi :</label>
-                                            <select class="form-control" name="jenis_pengeluaran"  value="{{ $biayaOperasional->jenis_pengeluaran }}">
-                                                <option value="Biaya Transportasi">Biaya Transportasi</option>
                                                 <option value="Gaji Karyawan">Gaji Karyawan</option>
-                                                <option value="Pesangan">Pesangan</option>
+                                                <option value="Pesangon">Pesangon</option>
                                                 <option value="BPJS Perusahaan">BPJS Perusahaan</option>
                                                 <option value="Perjalanan Dinas">Perjalanan Dinas</option>
                                                 <option value="Perbaikan dan Pemeliharaan">Perbaikan dan Pemeliharaan</option>
@@ -73,7 +68,8 @@
                                                 <option value="Telpon dan Wifi">Telpon dan Wifi</option>
                                                 <option value="erbaikan Kantor">Perbaikan Kantor</option>
                                                 <option value="Air dan Listrik">Air dan Listrik</option>
-                                                <option value="Lain-Lain">Lain-Lain</option>
+                                                <option value="Alat Tulis Kantor">Alat Tulis Kantor</option>
+                                                <option value="Lain-Lain">Lain-Lain</option>/option>
                                             </select>
                                             </td>
                                             <td style="vertical-align: top;">
