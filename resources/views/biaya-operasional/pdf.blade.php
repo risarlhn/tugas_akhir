@@ -47,7 +47,9 @@
         </thead>
         <tbody>
             @php 
-                $total_harga =0;
+                $total_harga = 0;
+                $sum_pokok_penjualan = 0;
+                $sum_biaya_umum =0;
                 $sum_pembelian_barang = 0;
                 $sum_biaya_transportasi = 0;
                 $sum_ban= 0;
@@ -170,6 +172,16 @@
                         $sum_lain += $item->harga_biaya;
                     @endphp
                 @endif
+                @if($item->kategori_pengeluaran == 'Pokok Penjualan')
+                    @php
+                        $sum_pokok_penjualan += $item->harga_biaya;
+                    @endphp
+                @endif
+                @if($item->kategori_pengeluaran == 'Biaya Umum')
+                    @php
+                        $sum_biaya_umum += $item->harga_biaya;
+                    @endphp
+                @endif
                 <tr>
                     <td>{{ $key + 1 }}</td>
                     <td>
@@ -208,16 +220,17 @@
         </tr>
      <thead>
     </table>
-    <h3>II. Harga Pokok Penjualan</h3>
+    
+    <h3>II. Harga Pokok Penjualan </h3>
     <ol>
         <li>Pembelian Barang : {{ number_format($sum_pembelian_barang, 0, ',', '.') }}</li> 
         <li>Biaya Transportasi : {{ number_format($sum_biaya_transportasi, 0, ',', '.') }}</li>
-        <li>Ban : {{ number_format($sum_ban, 2, ',', '.') }}</li>
-        <li>Pelumas Oli : {{ number_format($sum_pelumas_oli, 2, ',', '.') }} </li> 
-        <li>Material Umum : </li>
+        <li>Ban : {{ number_format($sum_ban, 0, ',', '.') }}</li>
+        <li>Pelumas Oli : {{ number_format($sum_pelumas_oli, 0, ',', '.') }} </li> 
+        <li>Material Umum : {{ number_format($sum_material_umum, 0, ',', '.') }} </li>
     </ol>
 
-    <b>Jumlah Beban : </b>
+    <b style="margin-left: 400px;" >Jumlah Beban : {{ number_format($sum_pokok_penjualan, 0, ',', '.') }} </b>
     <h3>Biaya Umum</h3>
     <ol>
         <li>Biaya Gaji Karyawan :  {{ number_format($sum_gaji_karyawan, 0, ',', '.') }} </li>
@@ -236,7 +249,7 @@
         <li>Beban Alat Tulis Kantor :  {{ number_format($sum_alat, 0, ',', '.') }}</li>
         <li>Beban Lain Lain : {{ number_format($sum_lain, 0, ',', '.') }}</li>
     </ol>
-    <b>Jumlah Beban : </b>
+    <b style="margin-left: 400px;">Jumlah Beban :  {{ number_format($sum_biaya_umum, 0, ',', '.') }}</b>
 </body>
 
 </html>

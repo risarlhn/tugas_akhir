@@ -63,7 +63,7 @@
                                                 <option value="Bank dan Bunga Kredit">Bank dan Bunga Kredit</option>
                                                 <option Leasing="Ban">Leasing</option>
                                                 <option value="Telpon dan Wifi">Telpon dan Wifi</option>
-                                                <option value="erbaikan Kantor">Perbaikan Kantor</option>
+                                                <option value="Perbaikan Kantor">Perbaikan Kantor</option>
                                                 <option value="Air dan Listrik">Air dan Listrik</option>
                                                 <option value="Alat Tulis Kantor">Alat Tulis Kantor</option>
                                                 <option value="Lain-Lain">Lain-Lain</option>
