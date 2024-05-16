@@ -33,11 +33,34 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card card-tasks">
+            <div class="centered-content">
+            <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px;" align="left"><br>
+            </div>
             </div>
         </div>
     </div>
 </div>
+
 @endif
+@if (auth()->user()->role == 'CUSTOMER')
+<div class="row">
+        <div class="col-md-12">
+            <div class="card card-chart">
+                <div class="card-header">
+                <div class="centered-content">
+                    <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
+                </div>  
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    @endif
 
 @if (auth()->user()->role == 'DIREKTUR') 
  <div class="row">
@@ -45,7 +68,10 @@
             <div class="card card-chart">
                 <div class="card-header">
                     <br>
-                    <center><h1 style="color: #5C74FB; font-weight: bold;">SELAMAT DATANG DI DASHBOARD DIREKTUR</h1></center>
+                    <div class="centered-content">
+                    <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
+                </div>  
+                </div>
                     <br>
                     <br>
                     <br>
@@ -65,19 +91,18 @@
         <div class="col-md-12">
             <div class="card card-chart">
                 <div class="card-header">
-                    <br>
-                    <center><h2 style="color: #5C74FB; font-weight: bold;">SELAMAT DATANG DI DASHBOARD KEUANGAN</h2></center>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br> 
+                <div class="centered-content">
+                    <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
+                </div>  
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
-
     </div>
 
 @endif

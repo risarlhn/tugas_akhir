@@ -4403,7 +4403,7 @@ input[type="button"].btn-block {
   margin-left: 265px;
   margin-top: 10px;
   margin-top: 10px;
-
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1), 0px 1px 5px 0 rgba(0, 0, 0, 0.10);
   background-color: #ffffff;
   flex-wrap: wrap;
   align-items: center;
@@ -16909,7 +16909,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .white-content {
-  background: #D8E1FF;
+  background: #E5E9FC;
 }
 
 .white-content .navbar.navbar-transparent .navbar-brand {
@@ -16953,7 +16953,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .white-content .main-panel {
-  background: #D8E1FF;
+  background: #E5E9FC;
 }
 
 .white-content h1,
@@ -17986,5 +17986,6 @@ Copyright (c) 2015 Daniel Eden
 .breadcrumb-item.active {
   color: rgba(34, 42, 66, 0.7);
 }
+
 
 /*# sourceMappingURL=dashboard-free.css.map */

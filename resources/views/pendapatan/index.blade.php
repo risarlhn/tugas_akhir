@@ -130,7 +130,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <h4 class="text-center"> <strong>Total Pemasukan : {{ number_format($total_harga, 0, ',', '.') }}</strong> </h4>
+                        <h4 class="text-center"> <strong>TOTAL PEMASUKAN = {{ number_format($total_harga, 0, ',', '.') }}</strong> </h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -177,7 +177,7 @@
                             @endforeach
                         </tbody>                 
                     </table>
-                    <h4 class="text-center"> <strong>Total Pengeluaran : {{ number_format($total_harga, 0, ',', '.') }} </strong></h4>
+                    <h4 class="text-center"> <strong>TOTAL PENGELUARAN = {{ number_format($total_harga, 0, ',', '.') }} </strong></h4>
                         <br>
                         <br>
                         <br>

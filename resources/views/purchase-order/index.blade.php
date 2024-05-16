@@ -18,7 +18,7 @@
                     <div class=" table-responsive" >
                         <table class="table tablesorter table-bordered" id="myTable">
                             <thead class=" text-primary table-bordered">
-                                <tr>
+                                <tr class=" table-bordered">
                                     <th scope="col">#</th>
                                     <th scope="col">Tanggal</th>
                                     <th scope="col">Nama Perusahaan</th>
@@ -72,13 +72,6 @@
                                                 class="btn- btn-success btn-sm text-white mr-1">
                                                 <i class="tim-icons icon-check-2"></i>
                                             </a>
-                                        </td>
-                                        <td>
-                                        <label for="komentar">Komentar:</label><br>
-                                                <textarea id="komentar" name=""></textarea><br>
-                                                <div style="text-align: center;">
-                                                <button type="submit" class="btn btn-sm btn-info">Simpan</button>
-                                                </div>
                                         </td>
                                         </form>
                                         @endif
