@@ -43,9 +43,9 @@ class PengeluaranBbmController extends Controller
         $pengeluaranBbm->nama_perusahaan = $request->nama_perusahaan;
         $pengeluaranBbm->tanggal = $request->tanggal;
         $pengeluaranBbm->qty= $request->qty;
-        $pengeluaranBbm->harga_dasar =  (float)str_replace(',', '', $request->harga_dasar);
-        $pengeluaranBbm->ppn =  (float)str_replace(',', '', $request->ppn);
-        $pengeluaranBbm->total =  (float)str_replace(',', '', $request->total);
+        $pengeluaranBbm->harga_dasar =  (float) str_replace(['.', ','], ['', '.'], $request->harga_dasar);
+        $pengeluaranBbm->ppn =  (float) str_replace(['.', ','], ['', '.'], $request->ppn);
+        $pengeluaranBbm->total =  (float) str_replace(['.', ','], ['', '.'], $request->total);
         $pengeluaranBbm->no_pengeluaran= $request->no_pengeluaran;
 
         $pengeluaranBbm->save();

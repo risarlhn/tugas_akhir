@@ -137,10 +137,20 @@ class BiayaOperasionalController extends Controller
         return view('biaya-operasional.laporan', compact('data'));
     }
 
-
-    public function cetak()
+    public function cetak(Request $request)
     {
-        $data = BiayaOperasional::get();
+        $startDate = $request->startDate;
+        $endDate = $request->endDate;
+
+        if ($startDate && $endDate) {
+            // Jika keduanya ada, ambil data berdasarkan rentang tanggal
+            $data = BiayaOperasional::whereDate('created_at', '>=', $startDate)
+                            ->whereDate('created_at', '<=', $endDate)
+                            ->get();
+        } else {
+            // Jika salah satu atau kedua tanggal tidak ada, ambil semua data
+            $data = BiayaOperasional::all();
+        }
         
         $dompdf = new Dompdf();
         $dompdf->loadHtml(view('biaya-operasional.pdf', compact('data'))->render());
