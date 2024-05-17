@@ -27,6 +27,7 @@
                                     <th scope="col">Status</th>
                                     @if (auth()->user()->role == 'ADMIN')
                                     <th scope="col">Action</th>
+                                    
                                     @endif
                                     
                                 </tr>

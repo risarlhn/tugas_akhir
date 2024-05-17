@@ -83,8 +83,6 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-
-
                         </table>
 
                         <br>

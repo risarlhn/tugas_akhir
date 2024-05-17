@@ -51,12 +51,6 @@
                     <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
                 </div>  
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
             </div>
         </div>
     </div>
@@ -72,13 +66,6 @@
                     <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
                 </div>  
                 </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br> 
                 </div>
             </div>
         </div>
@@ -95,12 +82,6 @@
                     <img src="{{ asset('img/dashboard.jpg') }}" width="700" style="margin-left: 150px" align="center"><br>
                 </div>  
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
             </div>
         </div>
     </div>

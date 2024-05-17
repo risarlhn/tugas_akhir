@@ -86,7 +86,7 @@
             @if (auth()->user()->role == 'ADMIN')
             <li>
                 <a data-toggle="collapse" href="#laporan" aria-expanded="true">
-                    <i class="tim-icons icon-book-bookmark"></i>"  
+                    <i class="tim-icons icon-book-bookmark"></i>
                     <span class="nav-link-text" >{{ __('Laporan') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
