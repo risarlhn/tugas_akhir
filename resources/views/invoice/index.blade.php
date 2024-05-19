@@ -11,7 +11,8 @@
                         </div>
                         @if (auth()->user()->role == 'ADMIN')
                         <div class="col-4 text-right">
-                            <a href="{{ route('invoice.create') }}" class="btn btn-sm btn-info"  >+Tambah Invoice</a>                        </div>
+                            <a href="{{ route('invoice.create') }}" class="btn btn-sm btn-info"  >+Tambah Invoice</a>                        
+                        </div>
                         @endif
                     </div>
                     <br>

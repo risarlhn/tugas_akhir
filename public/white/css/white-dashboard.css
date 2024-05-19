@@ -14962,7 +14962,7 @@ table.tablesorter thead tr .headerSortDown {
 .sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a i,
 .off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a i,
 .off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a i {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 20px;
   width: 26px;
 }
