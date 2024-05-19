@@ -3,35 +3,35 @@
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
                 <li class="dropdown nav-item ">
-                @if (auth()->user()->role == 'ADMIN'|| (auth()->user()->role == 'DIREKTUR'))
+                    @if (auth()->user()->role == 'ADMIN'|| (auth()->user()->role == 'DIREKTUR'))
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <div class="notification d-none d-lg-block d-xl-block"></div>
                         <i class="tim-icons icon-bell-55" style="color: #5f81ff;"></i>
                         <p class="d-lg-none"> {{ __('Notifications') }} </p>
                         <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                            <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
-                            </li>
-                            <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">You have 5 more tasks</a>
-                            </li>
-                            <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">Your friend Michael is in town</a>
-                            </li>
-                            <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">Another notification</a>
-                            </li>
-                            <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">Another one</a>
-                            </li>
+                            <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                                @forelse ($unreadNotifications as $po)
+                                <li class="nav-link">
+                                    <hr />
+                                    <a href="{{ route('purchase-order.mark-as-read', $po->id) }}" class="nav-item dropdown-item">
+                                        Terdapat Pengajuan Purchase Order<br /> baru dari Perusahaan {{ $po->user_name }} <br />oleh {{ $po->nama_perusahaan }} - {{ $po->created_at->diffForHumans() }}
+                                    </a>
+                                </li>
+                                @empty
+                                <li class="nav-link">
+                                    <p>Tidak ada pengajuan Purchase Order untuk saat ini</p>
+                                </li>
+                                @endforelse
                             </ul>
+                        </ul>
                     </a>
                 </li>
                 @endif
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <div class="photo">
-                            <img src="{{ asset('white') }}/img/anime3.png" alt="{{ __('Profile Photo') }}">                        </div>
+                            <img src="{{ asset('white') }}/img/anime3.png" alt="{{ __('Profile Photo') }}">
+                        </div>
                         <b class="caret d-none d-lg-block d-xl-block" style="color: #5f81ff;"></b>
                         <p class="d-lg-none">{{ __('Log out') }}</p>
                     </a>
@@ -50,5 +50,3 @@
         </div>
     </div>
 </nav>
-
-
